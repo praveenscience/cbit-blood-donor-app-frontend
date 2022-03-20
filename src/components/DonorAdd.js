@@ -20,6 +20,7 @@ const DonorAdd = () => {
             key={fg}
             Label={fg}
             Id={fg.replace(" ", "")}
+            Type={fg.replace(" ", "") === "Name" ? "text" : "number"}
             Value={Fields[fg.replace(" ", "")][0]}
             onChange={e => Fields[fg.replace(" ", "")][1](e.target.value)}
             Placeholder={`Please enter your ${fg}.`}
