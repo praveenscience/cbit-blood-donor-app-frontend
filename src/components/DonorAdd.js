@@ -47,7 +47,16 @@ const DonorAdd = () => {
             <option value="O-">O-</option>
           </select>
         </div>
-        <input type="submit" className="btn btn-primary" value="Add Me!" />
+        <input
+          disabled={
+            Name.trim().length < 3 ||
+            ContactNumber.trim().length < 13 ||
+            BloodGroup.trim().length < 2
+          }
+          type="submit"
+          className="btn btn-primary"
+          value="Add Me!"
+        />
       </form>
     </div>
   );
