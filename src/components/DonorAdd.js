@@ -14,6 +14,9 @@ const DonorAdd = ({ addDonors }) => {
   const handleSubmit = e => {
     e.preventDefault();
     addDonors({ Name, ContactNumber, BloodGroup });
+    setName("");
+    setContactNumber("");
+    setBloodGroup("");
   };
 
   return (
