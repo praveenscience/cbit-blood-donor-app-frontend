@@ -1,7 +1,7 @@
 import { useState } from "react";
 import FormGroup from "./Bootstrap/FormGroup";
 
-const DonorAdd = () => {
+const DonorAdd = ({ addDonors }) => {
   const [Name, setName] = useState("");
   const [ContactNumber, setContactNumber] = useState("");
   const [BloodGroup, setBloodGroup] = useState("");
@@ -13,6 +13,7 @@ const DonorAdd = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    addDonors({ Name, ContactNumber, BloodGroup });
   };
 
   return (
