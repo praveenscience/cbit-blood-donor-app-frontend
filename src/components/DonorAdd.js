@@ -11,10 +11,14 @@ const DonorAdd = () => {
     ContactNumber: [ContactNumber, setContactNumber]
   };
 
+  const handleSubmit = e => {
+    e.preventDefault();
+  };
+
   return (
     <div className="DonorAdd col-12 col-md-4">
       <h2>Add yourself as Blood Donor</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         {["Name", "Contact Number"].map(fg => (
           <FormGroup
             key={fg}
