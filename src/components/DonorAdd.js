@@ -56,7 +56,7 @@ const DonorAdd = ({ addDonors }) => {
         <input
           disabled={
             Name.trim().length < 3 ||
-            ContactNumber.trim().length < 13 ||
+            ContactNumber.trim().length < 12 ||
             BloodGroup.trim().length < 2
           }
           type="submit"
