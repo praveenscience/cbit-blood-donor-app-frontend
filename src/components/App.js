@@ -4,6 +4,16 @@ import DonorAdd from "./DonorAdd";
 import DonorList from "./DonorList";
 
 class App extends Component {
+  state = {
+    Donors: []
+  };
+
+  addDonors = donor => {
+    this.setState({
+      Donors: [...this.state.Donors, donor]
+    });
+  };
+
   render() {
     return (
       <div className="App">
@@ -13,8 +23,8 @@ class App extends Component {
         <main>
           <div className="container-fluid">
             <div className="row">
-              <DonorList />
-              <DonorAdd />
+              <DonorList List={this.state.Donors} />
+              <DonorAdd addDonors={this.addDonors} />
             </div>
           </div>
         </main>
